@@ -1,14 +1,27 @@
 import './App.css';
-import Title from "./components/Title"
-import Paragraph from "./components/Paragraph"
+import Welcome from './components/Welcome';
+import NewDate from './components/NewDate';
+import Person from './components/Person';
 
+const veryWelcome = (today) => {
+  console.log(today);
+  let div = document.createElement("div");
+  let h1 = document.createElement("h1");
+  h1.innerHTML = `hoy es${today}`;
+  div.appendChild(h1);
+  let prap ={
+    userName: "John",
+    todayDate: today
+  }
+};
 
 function App() {
-  return (
+  let today = new Date(Date.now()).toLocaleDateString();
+  return ( 
     <div className="main">
-     <Title></Title>
-     <Paragraph></Paragraph>
-     <Paragraph></Paragraph>
+    <Welcome userName="Naiara" today={today}></Welcome>
+    <Welcome userName="Judith" today={today}></Welcome>
+    <Welcome userName="thai" today={today}></Welcome>
     </div>
   );
 }
