@@ -7,7 +7,6 @@ function App() {
   return ( 
 
 
-
   <div className="card-container">
     <CardWrapper>
       <div className="img-container">
@@ -33,7 +32,7 @@ function App() {
         <FontAwesomeIcon icon={faStar} />
         <FontAwesomeIcon icon={faStar} />
         <FontAwesomeIcon icon={faStar} />
-        </div> <div> (105 Reviews)</div>
+        </div><div> (105 Reviews)</div>
         </div>
         </div>
         <div className="icons">
