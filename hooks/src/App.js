@@ -1,14 +1,31 @@
-//import './App.css';
-import {useState} from "react";
-import Person from "./components/Person";
+import './App.css';
+import {useState, useEffect} from "react";
+
 function App() {
-  const [count, setCount]=useState(0)
+    const [count, setCount] = useState (10);
+    const [running, setRunning] = useState (false);
+
+    useEffect(()=>{
+        if (count>0){
+            setTimeout(()=>{
+                setCount(count - 1);
+            }, 1000)
+        } else {
+            setRunning(true)
+        }
+    })
   return (
-    <div>
-      <Person/>
-      {/*<p>Has clicado {count} veces</p>
-      <buttom onClick={()=> setCount(count +1)}>Pulsame</buttom>*/}
-    </div>
+<div>
+    <h1>Rocket Launching - NASA Mars</h1>
+    <h2>Ignition Sequence Start</h2>
+    
+   {running && <h3 className='pane red'>
+     All engines running. Lift Out!</h3>}
+    <h3 className={count === 0 && "move"}>
+        <span className={count <= 5 && count >= 3 ? "yellow" : count <= 2 && "red"}>
+            {count}</span>
+    </h3>
+</div>
   );
 }
 
