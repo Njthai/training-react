@@ -1,0 +1,30 @@
+h3{
+    transition: all 3s cubic-bezier(1, -0.01, 0, 0.99);
+}
+h3 span{
+    display:inline-block;
+    margin: 1em 0;
+    padding: 0.3em 0.5em;
+    background-color: var(--blue);
+    border: 1px solid var(--dark);
+    border-radius: 0.5rem;
+    font-size: 5rem;
+}
+.yellow{
+    background-color: var(--yellow);
+}
+.red{
+    background-color: var(--red);
+}
+.move{
+    transform: translateY(-500px);
+}
+.pane .red{
+    display: inline-block;
+    border: 3px solid var(--dark);
+    background-color: red;
+    border-radius: 0.5rem;
+    padding: .3em .5em;
+    color: white;
+    font-style: italic;
+}
