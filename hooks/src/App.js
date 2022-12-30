@@ -3,9 +3,7 @@ import Movies from "./components/others/movies/Movies";
 
 function App() {
   return (
-    <div>
-    
-    </div>
+  <Movies></Movies>
   );
 }
 

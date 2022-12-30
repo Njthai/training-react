@@ -32,7 +32,6 @@ function Movies() {
   const noFilter = () => {
     changeVisibility(movies);
   };
-constsdfj= sdih
   return (
     <MoviesMain>
       <div className="actions">
