@@ -16,9 +16,9 @@ function ItemCost(props) {
     }
   }
   return (
-<div className="item-cost flex-20 expense fa-3x flex-center">
-          <span>{props.money.income && sign.plus.unicode || sign.minus.unicode}${props.money.amount}</span>
-          <FontAwesomeIcon icon={props.money.income && faArrowUpLong || faArrowDownLong} className="m-left-20" />
+<div className={`item-cost flex-20 ${props.money.income && 'income' || 'expense'} fa-3x flex-center`}>
+          <span>{(props.money.income && sign.plus.unicode) || sign.minus.unicode}${props.money.amount}</span>
+          <FontAwesomeIcon icon={(props.money.income && faArrowUpLong) || faArrowDownLong} className="m-left-20" />
         </div>
   );
 }
