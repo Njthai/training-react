@@ -5,6 +5,11 @@ import { expensesStats } from "../utils/expensesStats";
 import { monthToString } from "../utils/monthToString";
 
 function ExpensesFilter(props) {
+    const [month, setMonth] = useState(monthToString(new Date().toLocaleDateString())
+    );
+    const handleSelect=(e)=>{
+        setMonth(e.target.value)
+    }
 const stats= expensesStats(props.months);
   return (
     <Wrapper>
@@ -25,7 +30,7 @@ const stats= expensesStats(props.months);
             </div>
       </div>
           <form>
-            <select name="month">
+            <select name="month" onChange={handleSelect} value={month}>
                 <option value="January">January</option>
                 <option value="February">February</option>
                 <option value="March">March</option>
