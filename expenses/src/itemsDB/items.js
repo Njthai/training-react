@@ -13,28 +13,32 @@ import {
   export const classes ={
     incoming:{
       bgColor: 'light-incoming',
-      Color: 'incoming',
+      color: 'incoming',
     },
     transfer:{
       bgColor: 'light-transfer',
-      Color: 'transfer',
+      color: 'transfer',
     },
     car:{
       bgColor: 'light-car',
-      Color: 'car',
+      color: 'car',
     },
     bizum:{
       bgColor: 'light-bizum',
-      Color: 'bizum',
+      color: 'bizum',
     },
     bill:{
       bgColor: 'light-bill',
-      Color: 'bill',
+      color: 'bill',
     },
     electricity:{
       bgColor: 'light-electricity',
-      Color: 'electricity',
+      color: 'electricity',
     },
+    insurance: {
+      bgColor: "light-insurance",
+      color: "insurance",
+    }
   }
 
   export const itemsList = [
