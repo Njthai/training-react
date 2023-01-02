@@ -1,14 +1,15 @@
-import "./InputExpenses.css";
-import Wrapper from "./wrappers/Wrapper";
-import { useState } from "react";
 import { faCircle, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { classes } from "../itemsDB/items";
 import ItemIcon from "./items/ItemIcon";
+import "./InputExpenses.css";
+import Wrapper from "./wrappers/Wrapper";
+import { useState } from "react";
+
 const InputExpenses = (props) => {
   const [visible, setVisible] = useState(false);
-  const handleVisible = (e) => {
+  const handleVisisble = (e) => {
     e.stopPropagation();
-    setVisible(!visible);
+    setVisible(!visible)
   };
   const [expense, setNewExpense] = useState({
     title: "",
@@ -40,16 +41,14 @@ const InputExpenses = (props) => {
   return (
     <Wrapper
       content={
-        <form className="new-expense" onSubmit={handleSubmit}>
-          <ItemIcon
-            onClick={handleVisible}
+        <form className="new-expense " onSubmit={handleSubmit}>
+          <ItemIcon onClick ={handleVisisble}
             icons={[faCircle, faPlus]}
             classes={classes.insurance}
-            size="fa-2x"
+            size={"fa-2x"}
           />
           <h2>Input Expense</h2>
-          {/* en función del valor de la variable de estado, añade o quita la clase hidden */}
-          <div className={`form-container ${!visible && "hidden"}`}>
+          <div className={`form-container ${!visible && "hidden"}`} >
             <label htmlFor="title">
               <h3>Title</h3>
             </label>
@@ -93,11 +92,7 @@ const InputExpenses = (props) => {
               <option value="electricity">electricity</option>
             </select>
           </div>
-          <div
-            className={`form-container income-container ${
-              !visible && "hidden"
-            }`}
-          >
+          <div className={`form-container income-container ${!visible && "hidden"}`}>
             <label htmlFor="isIncome">
               <h3>Is Income</h3>
             </label>
@@ -110,7 +105,7 @@ const InputExpenses = (props) => {
             />
             <span className="checkmark" aria-hidden="true"></span>
           </div>
-          <button className={`${!visible && "hidden"}`}>Add Record</button>
+          <button className={`form-container ${!visible && "hidden"}`}>Add Record</button>
         </form>
       }
     />

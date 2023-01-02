@@ -1,19 +1,21 @@
-export const expensesStats=(itemsList)=> {
-    let incomes = 0,
+export const expensesStats = (itemList) => {
+  // console.log(itemList);
+  let incomes = 0,
     expenses = 0,
     total = 0;
-    if (itemsList.lenght === 0){
-        return[0,0]
+  if (itemList.lenght === 0) {
+    return [0, 0];
+  }
+  itemList.forEach((element) => {
+    if (element.money.income) {
+      incomes += +element.money.amount;
+    } else {
+      expenses += +element.money.amount;
     }
-    itemsList.forEach((element) => {
-        if (element.money.income) {
-            incomes += element.money.amount;
-        }else {
-          expenses += element.money.amount;
-        }
-    });
-    total = Math.abs(incomes)+ Math.abs (expenses);
-    let incomesPercentage = Math.round((incomes * 100) / total);
-    let expensesPercentage = Math.round((expenses * 100) / total);
-    return [incomesPercentage, expensesPercentage];
+  });
+  total = Math.abs(incomes) + Math.abs(expenses);
+  // console.log(total);
+  let incomesPrecentage = Math.round((incomes * 100) / total);
+  let expensesPrecentage = Math.round((expenses * 100) / total);
+  return [incomesPrecentage, expensesPrecentage];
 };

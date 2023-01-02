@@ -1,5 +1,6 @@
 import './ItemInfo.css';
 
+
 function ItemInfo(props) {
   return (
     <div className="item-info flex-60">

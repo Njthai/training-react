@@ -1,19 +1,19 @@
 :root {
   box-sizing: border-box;
-  font-size: 0.785em;
-  --bg-color: #f7f8fc;
+  font-size: 0.785rem;
+  --bg-color:#f7f8fc;
 }
 *,
 ::after,
 ::before {
+  margin: 0;
+  border: 0;
+  padding: 0;
   box-sizing: inherit;
   outline: none 0;
-  padding: 0;
-  border: 0;
-  margin: 0;
 }
 body {
-  font-family: "Rubik" "sans-serif";
+  font-family: "Rubik", sans-serif;
   background-color: var(--bg-color);
   width: 100vw;
   min-height: 100vh;
@@ -24,24 +24,24 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Titillium Web" , sans-serif;
 }
-h1{
+h1 {
   font-size: 3.5rem;
 }
-h2{
-  font-size: 3.25rem;
+h2 {
+  font-size: 2.25rem;
 }
-h3{
+h3 {
   font-size: 1.5rem;
 }
-h4{
+h4 {
   font-size: 1.1rem;
 }
-h5{
+h5 {
   font-size: 0.9rem;
 }
-h6{
+h6 {
   font-size: 0.7rem;
 }
 .flex-center{
