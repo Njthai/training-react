@@ -1,19 +1,24 @@
 //import './App.css';
-import ReactDOM from 'react-dom';
+import ReactDOM from "react-dom";
+import TextInputWithFocusButton from "./components/TextInputWithFocusButton";
 
 function App() {
   return (
-    <div>
-      <h1>Hello World!</h1>
-      <p>
+    <>
+      {/*{ReactDOM.createPortal(
+        <h1>Hello World!</h1>,
+        document.querySelector("#Hello")
+      )}*/}
+      {/*<p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita,
         nobis quisquam ipsum culpa nihil repudiandae consectetur illo, odit
         libero porro exercitationem vitae consequatur eaque labore excepturi.
         Aliquid dolores harum inventore itaque, alias hic. Modi eaque aperiam
         maxime deserunt adipisci omnis porro quod architecto molestiae, quasi
         quaerat vero alias pariatur dolore!
-      </p>
-    </div>
+      </p>*/}
+      <TextInputWithFocusButton />
+    </>
   );
 }
 
