@@ -1,10 +1,24 @@
-//import './App.css';
-import LoginPage from "./views/Login/LoginPage.js";
+import classes from "../src/views/Login/Modal/Modal.js";
 
-function App() {
-  return 
-  <LoginPage />
-  ;
+function Modal() {
+  return (
+    <>
+      <div>
+        <div>
+          <h3></h3>
+          <div>
+            <p></p>
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+            <button></button>
+          </div>
+        </div>
+      </div>
+      <div />
+    </>
+  );
 }
-
-export default App;
+export default Modal;
