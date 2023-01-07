@@ -4,9 +4,8 @@ import Counter from './components/Counter.js'
 
 function App() {
   return (
-  {/*<FilterReducer></FilterReducer>*/}
-<Counter/>
-  );
+  <Counter></Counter>
+  )
 }
 
 export default App;
