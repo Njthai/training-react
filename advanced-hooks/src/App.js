@@ -1,19 +1,15 @@
-import './App.css';
-//import FilterReducer from './components/FilterReducer';
-//import Counter from './components/Counter.js'
-import B from './src/nestedComponents/B.js';
-import C from './src/nestedComponents/C.js';
-
+//import './App.css';
+import StringModifier from "./components/StringModifier";
+import StringReader from "./components/StringReader";
+import StringProvider from "./store/StringProvider";
 
 function App() {
   return (
-  <div>
-    {/*<FilterReducer></FilterReducer>
-  <Counter></Counter>*/}
- <B></B>
- <C></C>
-</div>
-  )
+<StringProvider>
+    <StringReader></StringReader>
+    <StringModifier></StringModifier>
+</StringProvider>
+  );
 }
 
 export default App;

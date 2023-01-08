@@ -1,6 +1,6 @@
 // import './E.css';
 import { useContext } from "react";
-import { MyContext } from "../App";
+import { MyContext } from "../components/CountContex";
 
 function E() {
   const count = useContext(MyContext);
