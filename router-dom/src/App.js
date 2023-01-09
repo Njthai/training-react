@@ -1,9 +1,8 @@
-import './App.css';
+import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/layout/navigation/NavBar";
-import About from "./views/About";
-import Contact from "./views/Contact";
-import Home from "./views/Home";
+import Aside from "./components/layout/navigation/Aside";
+import MainRoutes from "./components/layout/navigation/MainRoutes";
 
 function App() {
   return (
@@ -13,11 +12,16 @@ function App() {
         <NavBar></NavBar>
       </header>
       <main>
-        <Route>
-          <Route path="/" element={<Home></Home>} />
-          <Route path="/about" element={<About></About>} />
-          <Route path="/contact" element={<Contact></Contact>} />
-        </Route>
+        <aside>
+          <Routes>
+            <Route path="/blog" element={<Aside />}>
+              <Route path=":id" element={<Aside />}></Route>
+            </Route>
+          </Routes>
+        </aside>
+        <div className="container">
+         <MainRoutes></MainRoutes>
+        </div>
       </main>
     </>
   );

@@ -1,21 +1,20 @@
-//import "./About.css";
+//import "./NotFound.css";
 import { useParams } from "react-router-dom";
 
 
-function About() {
-  const {id} = useParams ()
-  console.log(id);
+function NotFound() {
+
   
   return (
     <>
-      <h2>About</h2>
+      <h2>404 Not Found</h2>
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione,
         accusamus.
       </p>
-      {id && <p>Id: {id}</p>}
+      
     </>
   );
 }
 
-export default About;
+export default NotFound;
