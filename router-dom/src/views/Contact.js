@@ -9,7 +9,8 @@ function Contact() {
 
   useEffect(() => {
     setTimeout(() => {
-      setLoggedIn(true);
+      // setLoggedIn(true);
+      navigate("/")
     }, 3000);
   }, []);
 
